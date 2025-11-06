@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercicio 3</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="./js/blink-controls.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: #ECECEC">
+
+        <a-entity id="rig" position="0 1.6 0">
+        <a-entity id="camera" camera look-controls></a-entity>
+
+        <a-entity
+          oculus-touch-controls="hand: right"
+          blink-controls="cameraRig: #rig; teleportOrigin: #camera; collisionEntities: .ground;">
+        </a-entity>
+
+        <a-entity
+          oculus-touch-controls="hand: left"
+          blink-controls="cameraRig: #rig; teleportOrigin: #camera; collisionEntities: .ground;">
+        </a-entity>
+      </a-entity>
+
+      <a-plane
+        id="chao"
+        class="ground"
+        position="0 0 0"
+        rotation="-90 0 0"
+        width="10"
+        height="10"
+        src="./Textures/Wood_Cherry_Original_baseColor.jpeg"
+        repeat="10 20">
+      </a-plane>
+
+      <a-plane
+        id="teto"
+        position="0 5 0"
+        rotation="90 0 0"
+        width="10"
+        height="10"
+        color="white"
+        repeat="10 20">
+      </a-plane>
+      
+      <a-plane 
+        id="frente"
+        position="0 2.5 -5"
+        rotation="0 0 0"
+        width="10"
+        height="5"
+        color="white"
+        repeat="8 4">
+      </a-plane>
+
+      <a-plane 
+        id="esquerda"
+        position="-5 2.5 0"
+        rotation="0 90 0"
+        width="10"
+        height="5"
+        color="white"
+        repeat="8 4">
+      </a-plane>
+
+      <a-plane 
+        id="direita"
+        position="5 2.5 0"
+        rotation="0 -90 0"
+        width="10"
+        height="5"
+        color="white"
+        repeat="8 4">
+      </a-plane>
+
+      <a-plane  
+        id="tras"
+        position="0 2.5 5"
+        rotation="0 180 0"
+        width="10"
+        height="5"
+        color="white"
+        repeat="8 4">
+      </a-plane>
+
+      <a-light 
+        type="point"
+        color="#ffdca8"
+        intensity="2"
+        distance="10"
+        position="0 4 0">
+      </a-light>
+    </a-scene>
+  </body>
+</html>
