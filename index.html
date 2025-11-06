@@ -9,7 +9,7 @@
   <body>
     <a-scene background="color: #ECECEC">
 
-        <a-entity id="rig" position="0 1.6 0">
+        <a-entity id="rig" position="0 2.6 9">
         <a-entity id="camera" camera look-controls></a-entity>
 
         <a-entity
@@ -91,6 +91,38 @@
         distance="15"
         position="0 4 0">
       </a-light>
+
+      <a-box
+        class="ground"
+        position="0 0 9"
+        depth="3"
+        width="20"
+        height="1"
+        src="./Textures/Wood_Cherry_Original_baseColor.jpeg">
+      </a-box>
+
+      <a-box
+        class="ground"
+        position="0 0 -9"
+        depth="3"
+        width="20"
+        height="1"
+        src="./Textures/Wood_Cherry_Original_baseColor.jpeg">
+      </a-box>
+
+      <a-box 
+        id="agua"
+        position="0 0.25 0" 
+        depth="15" 
+        width="20" 
+        height="0.5"
+        color="#1E90FF"
+        opacity="0.6"
+        material="transparent: true; roughness: 0.2; metalness: 0.5;">
+      </a-box>
+
+
+      <a-box class="ground" position="-4 0.6 3" depth="2" width="2" height="0.3" color="#8B4513"></a-box>
 
     </a-scene>
   </body>
