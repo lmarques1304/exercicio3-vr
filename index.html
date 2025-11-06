@@ -9,7 +9,7 @@
   <body>
     <a-scene background="color: #ECECEC">
 
-        <a-entity id="rig" position="0 0.6 0">
+        <a-entity id="rig" position="0 2.6 9">
         <a-entity id="camera" camera look-controls></a-entity>
 
         <a-entity
@@ -28,27 +28,47 @@
         class="ground"
         position="0 0 0"
         rotation="-90 0 0"
-        width="10"
-        height="10"
+        width="20"
+        height="20"
         src="./Textures/Wood_Cherry_Original_baseColor.jpeg"
         repeat="10 20">
       </a-plane>
+
+      <a-box
+        id="chao inicio"
+        class="ground"
+        position="0 0 10"
+        rotation="-90 0 0"
+        scale="20 5 1"
+        src="./Textures/Wood_Cherry_Original_baseColor.jpeg"
+        repeat="10 20">
+      </a-box>
+
+      <a-box
+        id="chao final"
+        class="ground"
+        position="0 0 -10"
+        rotation="-90 0 0"
+        scale="20 5 1"
+        src="./Textures/Wood_Cherry_Original_baseColor.jpeg"
+        repeat="10 20">
+      </a-box>
 
       <a-plane
         id="teto"
         position="0 5 0"
         rotation="90 0 0"
-        width="10"
-        height="10"
+        width="20"
+        height="20"
         color="white"
         repeat="10 20">
       </a-plane>
       
       <a-plane 
         id="frente"
-        position="0 2.5 -5"
+        position="0 2.5 -10"
         rotation="0 0 0"
-        width="10"
+        width="20"
         height="5"
         color="white"
         repeat="8 4">
@@ -56,9 +76,9 @@
 
       <a-plane 
         id="esquerda"
-        position="-5 2.5 0"
+        position="-10 2.5 0"
         rotation="0 90 0"
-        width="10"
+        width="20"
         height="5"
         color="white"
         repeat="8 4">
@@ -66,9 +86,9 @@
 
       <a-plane 
         id="direita"
-        position="5 2.5 0"
+        position="10 2.5 0"
         rotation="0 -90 0"
-        width="10"
+        width="20"
         height="5"
         color="white"
         repeat="8 4">
@@ -76,9 +96,9 @@
 
       <a-plane  
         id="tras"
-        position="0 2.5 5"
+        position="0 2.5 10"
         rotation="0 180 0"
-        width="10"
+        width="20"
         height="5"
         color="white"
         repeat="8 4">
@@ -88,9 +108,20 @@
         type="point"
         color="#ffdca8"
         intensity="2"
-        distance="10"
+        distance="15"
         position="0 4 0">
       </a-light>
+
+      <a-box 
+        position="0 0 0" 
+        depth="15" 
+        width="20" 
+        height="0.5"
+        color="#1E90FF"
+        opacity="0.6"
+        material="transparent: true; roughness: 0.2; metalness: 0.5;">
+      </a-box>
+
     </a-scene>
   </body>
 </html>
